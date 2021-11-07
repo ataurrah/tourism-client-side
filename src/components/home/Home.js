@@ -6,13 +6,13 @@ import Tour from '../tour/Tour';
 
 
 const Home = () => {
-const [service, setService] = useState([]);
-     useEffect(() => {
-            fetch('http://localhost:5000/services')
-                .then(res => res.json())
-                .then(data => setService(data))
-        }
-            , [])
+    const [service, setService] = useState([]);
+    useEffect(() => {
+        fetch('https://frozen-spire-89736.herokuapp.com/services')
+            .then(res => res.json())
+            .then(data => setService(data))
+    }
+        , [])
 
 
 
@@ -31,10 +31,10 @@ const [service, setService] = useState([]);
                     }
                 </Row>
             </div>
-           
+
 
             <div>
-            <Tour/>
+                <Tour />
             </div>
 
 
